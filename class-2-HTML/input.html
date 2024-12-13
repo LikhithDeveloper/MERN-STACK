@@ -7,26 +7,63 @@
   </head>
   <body>
     <form>
-      <label> Enter the Name: </label>
-      <input type="text" name="name" placeholder="enter the name" />
-      <input type="number" name="number" id="" />
-      <input type="password" name="" id="" />
-      <input type="email" name="" id="" />
-      <input type="date" name="" id="" />
-      <input type="time" name="" id="" />
-      <input type="color" name="" id="" />
-      <input type="file" name="" id="" />
-      <input type="image" src="" alt="" />
-      <input type="search" name="" id="" />
-      <input type="radio" name="" id="" />
-      <input type="range" name="" id="" />
-      <input type="checkbox" name="" id="" />
-      <input type="reset" value="cascas" />
-      <input type="submit" value="scnascn" />
-      <input type="url" name="" id="" />
-      <br />
-      <br />
-      <textarea></textarea>
+      <div
+        style="
+          display: block;
+          flex-direction: column;
+          width: 300px;
+          gap: 3px;
+          margin: 40px;
+          padding: 30px;
+        "
+      >
+        <label> Enter the Name: </label>
+        <input type="text" name="name" placeholder="enter the name" />
+        <br />
+        <label> Enter the Age: </label>
+        <input type="number" name="number" id="" />
+        <label> Enter the DOB: </label>
+        <input type="date" name="" id="" />
+        <br />
+
+        <label> Gender: </label>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+
+        <br />
+        <label> Enter the Number: </label>
+        <input type="number" name="number" id="" />
+        <label> Enter the Email: </label>
+        <input type="email" name="number" id="" />
+        <br />
+        <label>Password: </label>
+        <input type="password" name="" id="" />
+        <br />
+        <label>Confirm Password: </label>
+        <input type="password" name="" id="" />
+        <label>Address:</label>
+        <textarea></textarea>
+
+        <!--<input type="email" name="" id="" />
+        <input type="date" name="" id="" />
+        <input type="time" name="" id="" />
+        <input type="color" name="" id="" />
+        <input type="file" name="" id="" />
+        <input type="image" src="" alt="" />
+        <input type="search" name="" id="" />
+        <input type="radio" name="" id="" />
+        <input type="range" name="" id="" />
+        <input type="checkbox" name="" id="" />
+        <input type="reset" value="cascas" />
+        <input type="submit" value="scnascn" />
+        <input type="url" name="" id="" /> -->
+        <br />
+        <br />
+        <!-- <textarea></textarea> -->
+        <button type="submit">submit</button>
+      </div>
     </form>
   </body>
 </html>
