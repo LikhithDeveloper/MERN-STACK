@@ -1,0 +1,26 @@
+h1:nth-child(1) {
+  color: rgb(100, 240, 70);
+}
+
+h1:nth-child(2) {
+  color: rgb(118, 178, 104);
+}
+
+p {
+  color: rgba(42, 3, 22, 0.7);
+  font-size: 20px;
+}
+
+button {
+  padding: 7px 25px;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  background-color: #26cbb5;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #166565;
+  color: #ffffff;
+}

@@ -1,0 +1,116 @@
+/*group selector*/
+/* h1,
+p {
+  color: green;
+} */
+
+/*desendent selector*/
+/* div p {
+  color: blue;
+} */
+
+/*child selector*/
+/* span {
+  color: bisque;
+}
+
+div > span {
+  color: rgb(36, 81, 120);
+} */
+
+/*adjacent sibling selector*/
+/* h1 + p {
+  color: blue;
+}
+
+h1 + p + p {
+  color: greenyellow;
+} */
+
+/* general selector */
+/* h1 ~ p {
+  color: bisque;
+} */
+
+.div {
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  transition: 0.3s;
+}
+
+.div:hover {
+  background-color: rgb(63, 124, 177);
+  border-radius: 50%;
+  cursor: not-allowed;
+}
+
+/* * {
+  cursor: not-allowed;
+} */
+
+a:hover {
+  background-color: yellow;
+}
+a:active {
+  color: brown;
+}
+
+/* attribute selector */
+[placeholder] {
+  color: red;
+  background-color: rgb(226, 155, 155);
+}
+
+input[x="lik"] {
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+li:nth-child(1) {
+  font-size: 45px;
+  color: rgb(197, 197, 40);
+}
+
+li:nth-child(2) {
+  font-size: 30px;
+  color: rgb(44, 91, 132);
+}
+
+li:nth-child(3) {
+  font-size: 39px;
+  color: brown;
+}
+
+li:nth-child(4) {
+  font-size: 20px;
+  color: rgb(139, 190, 62);
+}
+
+li:nth-child(5) {
+  font-size: 10px;
+  color: rgb(173, 10, 171);
+}
+
+li:nth-child(6) {
+  font-size: 55px;
+  color: rgb(46, 68, 14);
+}
+
+li:nth-child(7) {
+  font-size: 24px;
+  color: rgb(182, 13, 13);
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-weight: 100;
+  text-align: center;
+  text-decoration: underline dashed;
+  text-transform: capitalize;
+  letter-spacing: 10px;
+  line-height: 20px;
+  word-spacing: 150px;
+  text-wrap: balance;
+}
