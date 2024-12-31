@@ -1,0 +1,58 @@
+.container {
+  width: 70px;
+  height: 70px;
+  padding: 30px;
+  text-align: center;
+  border: 2px solid blue;
+  animation-name: bounce;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  position: absolute;
+  border-radius: 50%;
+  background-color: green;
+}
+
+@keyframes blink {
+  0% {
+    left: 0;
+    top: 100px;
+  }
+  20% {
+    left: 100px;
+    top: 10px;
+  }
+  40% {
+    left: 300px;
+    top: 100px;
+  }
+  60% {
+    left: 500px;
+    top: 20px;
+  }
+  80% {
+    left: 700px;
+    top: 100px;
+  }
+  100% {
+    left: 900px;
+    top: 30px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 0;
+    background-color: blue;
+  }
+
+  40% {
+    top: 200px;
+    background-color: red;
+  }
+
+  100% {
+    top: 0px;
+    background-color: blueviolet;
+  }
+}
