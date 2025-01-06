@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boostrap Typography</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- if we want to include js script of bootstap in head we have to use defer keyword in script tag -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--Headings-->
+    <div class="container">
+      <p class="h1">The heading 1</p>
+      <p class="h2">The heading 2</p>
+      <p class="h3">The heading 3</p>
+      <p class="h4">The heading 4</p>
+      <p class="h5">The heading 5</p>
+      <p class="h6">The heading 6</p>
+    </div>
+
+    <!--display heading-->
+    <div class="container bg-light">
+      <p class="display-1">The heading 1</p>
+      <p class="display-2">The heading 2</p>
+      <p class="display-3">The heading 3</p>
+      <p class="display-4">The heading 4</p>
+      <p class="display-5">The heading 5</p>
+      <p class="display-6">The heading 6</p>
+    </div>
+
+    <!--lead-->
+    <p class="lead">
+      This is a lead paragraph. It stands out from regular paragraphs.
+    </p>
+
+    <!-- Abbrivations -->
+    <p class="h4"><abbr title="attribute">attr</abbr></p>
+    <p class="h5">
+      <abbr title="HyperText Markup Language" class="initialism">HTML</abbr>
+    </p>
+
+    <!-- fancy heading -->
+    <h3>This is fancy heading <span class="text-primary">it is small</span></h3>
+    <br />
+    <br />
+    <blockquote class="blockquote">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quis
+        exercitationem minima vero quae non modi veniam, tempora adipisci velit
+        saepe mollitia? Vel dignissimos animi, repellendus doloribus tempore
+        eveniet! Exercitationem!
+      </p>
+
+      <footer class="blockquote-footer">Likhith</footer>
+    </blockquote>
+
+    <!--lists-->
+    <ul class="list-unstyled">
+      <li>List</li>
+      <li>List</li>
+      <li>List</li>
+      <li>List</li>
+      <li>
+        Nested List
+        <ul>
+          <li>Nested List</li>
+          <li>Nested List</li>
+          <li>Nested List</li>
+          <li>Nested List</li>
+        </ul>
+      </li>
+    </ul>
+
+    <br />
+    <ul class="list-inline text-start bg-primary text-white">
+      <li class="list-inline-item p-4">Home</li>
+      <li class="list-inline-item p-4">About</li>
+      <li class="list-inline-item p-4">Services</li>
+      <li class="list-inline-item p-4">Contact</li>
+    </ul>
+    <br />
+    <br />
+
+    <ul
+      class="d-flex list-inline bg-primary text-white justify-content-between"
+    >
+      <li class="list-inline-item m-4">NAVBAR</li>
+
+      <ul class="list-inline-item text-start text-white">
+        <li class="list-inline-item p-4">Home</li>
+        <li class="list-inline-item p-4">About</li>
+        <li class="list-inline-item p-4">Services</li>
+        <li class="list-inline-item p-4">Contact</li>
+      </ul>
+    </ul>
+  </body>
+</html>
