@@ -42,6 +42,6 @@ console.log(name);
 // let name1 = "Likhith";
 // console.log(name1);
 
-console.log(name2);
+// console.log(name2);
 const name2 = "Likhith";
 console.log(name2);
