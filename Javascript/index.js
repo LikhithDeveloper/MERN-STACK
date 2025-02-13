@@ -24,7 +24,7 @@
 // console.table([accountId, accountName, accountBalance, accountAddress]);
 // console.table({ accountId, accountName, accountBalance, accountAddress });
 
-// Hoisting:- it is a mechanism in JS that moves the decleration of the variable to the top of the scope befor the code execution.
+// Hoisting:- it is a mechanism in JS that moves the decleration of the variable to the top of the scope before the code execution.
 
 // in case of var:-
 // Variables declared with var are hoisted and initialized with undefined.
@@ -34,14 +34,24 @@
 // Variables declared with let and const are hoisted, but unlike var, they are not initialized immediately.
 // They remain in a Temporal Dead Zone (TDZ) from the start of their enclosing scope until the declaration is encountered.
 
-console.log(name);
-var name = "Likhith";
-console.log(name);
+// console.log(name);
+// var name = "Likhith";
+// console.log(name);
 
 // console.log(name1);
 // let name1 = "Likhith";
 // console.log(name1);
 
 // console.log(name2);
-const name2 = "Likhith";
-console.log(name2);
+// const name2 = "Likhith";
+// console.log(name2);
+
+// let n = 2;
+// function square() {
+//   var ans = 10;
+// return ans;
+// }
+// square();
+// var square1 = square(n);
+// var square2 = square(4);
+// console.log(a);

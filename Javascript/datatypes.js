@@ -88,3 +88,7 @@ switch (a) {
     console.log("Nothing!");
     break;
 }
+
+console.log("----------------");
+console.log(x);
+var x = 200;
