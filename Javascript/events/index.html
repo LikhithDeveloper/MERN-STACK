@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(51, 45, 45, 0.2);
+        width: 500px;
+        height: 400px;
+      }
+      .color {
+        width: 20%;
+        height: 60%;
+        margin: 10px;
+      }
+      .red {
+        background-color: red;
+      }
+      .green {
+        background-color: green;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .blue {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button class="btn">Click</button>
+    <script>
+      document.querySelector(".btn").addEventListener("click", (e) => {
+        console.log(e);
+      });
+    </script> -->
+    <div class="container">
+      <div class="color red">Red</div>
+      <div class="color green">Green</div>
+      <div class="color yellow">Yellow</div>
+      <div class="color blue">Blue</div>
+    </div>
+    <p id="op"></p>
+    <script>
+      let container = document.querySelector(".container");
+      let op = document.getElementById("op");
+      container.addEventListener("click", (e) => {
+        // console.log(e);
+        op.innerText = "";
+        op.innerText = e.target.innerText;
+        Array.from(document.querySelectorAll(".color"))[0].addEventListener(
+          "click",
+          () => {
+            console.log("Hi");
+          }
+        );
+      });
+
+      // this is bubbling
+      //   container.addEventListener("click", (e) => {
+      //     // console.log(e.target);
+      //     // op.innerText = "";
+      //     // op.innerText = e.target.innerText;
+      //     console.log("Main");
+      //   });
+      //   Array.from(document.querySelectorAll(".color"))[0].addEventListener(
+      //     "click",
+      //     () => {
+      //       console.log("Hi");
+      //     }
+      //   );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="h1">Hello World!</h1>
+    <button onclick="changeText()">Click me</button>
+    <!-- <h1>Hello World</h1>
+    <h1>Hello World</h1>
+    <h1>Hello World</h1> -->
+    <p class="para">Hi this is ____</p>
+    <p class="para">Hi this is ____</p>
+    <button onclick="changePara()">click</button>
+
+    <script>
+      function changePara() {
+        let data = document.querySelectorAll(".para");
+        data.forEach((ele, index) => {
+          if (index % 2 == 0) {
+            ele.innerHTML = "Hi this is even";
+          } else {
+            ele.innerHTML = "Hi this is Odd";
+          }
+        });
+      }
+      function changeText() {
+        // using id
+        // let dom1 = document.getElementsByTagName("h1");
+        // here it will give the collection of all h1 tags
+        // let text = dom1[0].innerHTML.split(" ");
+        // dom1[0].innerHTML = `${text[0]} Likhith!`;
+        // let dom = document.getElementById("h1");
+        // let text = dom.innerHTML.split(" ");
+        // dom.innerHTML = `${text[0]} Likhith!`;
+
+        // using class name
+        // let dom2 = document.getElementsByClassName("h1");
+        // console.log(dom2);
+        // let text = dom[0].innerHTML.split(" ");
+        // dom[0].innerHTML = `${text[0]} Likhith!`;
+
+        // using query selector
+        let dom = document.querySelector(".h1");
+
+        let text = dom.innerHTML.split(" ");
+        dom.innerHTML = `${text[0]} Likhith!`;
+      }
+    </script>
+  </body>
+</html>

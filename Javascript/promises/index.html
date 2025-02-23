@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="prom()">Fetch Data</button>
+    <button onclick="change()">Hack Database</button>
+
+    <script>
+      // what is promises =>
+      // promises are used to handel asynchronus operations in js
+      // they are having three response of promises 1.Pending,2.Resolve,3.Reject
+      // promises takes two arguments in function parameter 1.resolve, 2.reject
+
+      // promises example
+      let success = true;
+      let flag = true;
+      function change() {
+        success = false;
+        if (flag) {
+          console.log("Data got corrupted");
+        }
+      }
+      // const promis = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     if (success) {
+      //       resolve("success");
+      //     } else {
+      //       reject(new Error());
+      //     }
+      //   }, 2000);
+      // });
+      // promis
+      //   .then((message) => console.log("success"))
+      //   .catch((err) => console.log(err))
+      //   .finally(() => console.log("operation finished"));
+
+      // promises in functions
+
+      // function Data() {
+      //   return new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       resolve("Data fetched");
+      //     }, 1000);
+      //   });
+      // }
+      // Data()
+      //   .then((data) => {
+      //     console.log("Data Processing....");
+      //     return data;
+      //   })
+      //   .then((message) => {
+      //     console.log(message);
+      //   })
+      //   .catch((err) => console.log(err));
+
+      // handeling errors in promises
+
+      function Data() {
+        return new Promise((resolve, reject) => {
+          console.log("Data Processing....");
+          setTimeout(() => {
+            if (success) {
+              resolve("Data fetched");
+            } else {
+              reject("Data not fetched");
+            }
+          }, 2000);
+        });
+      }
+      const prom = () => {
+        Data()
+          .then((data) => {
+            return data;
+          })
+          .then((message) => {
+            console.log(message);
+          })
+          .catch((err) => console.log(err));
+        // .finally(() => console.log("Operation Done"));
+      };
+    </script>
+  </body>
+</html>

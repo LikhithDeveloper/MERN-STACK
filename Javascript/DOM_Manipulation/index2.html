@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <p id="demo">This is paragraph</p> -->
+    <div id="container"></div>
+    <ul class="list"></ul>
+    <button onclick="append()">Append</button>
+    <button onclick="remove()">Remove</button>
+    <br />
+    <br />
+    <br />
+    <button class="alert">GetAlert</button>
+
+    <script>
+      document.querySelector(".alert").addEventListener("click", () => {
+        alert("Button clicked");
+      });
+      //   let para = document.getElementById("demo");
+      //   para.style.color = "red";
+      //   console.log(para);
+      let container = document.querySelector("#container"); // if we tag name in this then it will give the first element in th dom with corresponding tagname
+      // not only tag if there has multiple same element with correcponding id or class then it gives first one only
+      console.log(container);
+      container.style.width = "100px";
+      container.style.height = "100px";
+      container.style.backgroundColor = "red";
+      container.style.display = "flex";
+      container.style.justifyContent = "space-between";
+
+      let list = document.querySelector(".list");
+      //   let newlist = document.createElement("li");
+      //   newlist.innerHTML = `<li>Aitam</li>`;
+      //   list.append(newlist);
+
+      function append() {
+        let newlist = document.createElement("li");
+        newlist.innerHTML = `<li>Aitam</li>`;
+        list.append(newlist);
+      }
+
+      function remove() {
+        // list.remove(newlist);
+        let data = document.querySelectorAll("li");
+        data.forEach((ele, index) => {
+          ele.remove();
+        });
+      }
+    </script>
+  </body>
+</html>

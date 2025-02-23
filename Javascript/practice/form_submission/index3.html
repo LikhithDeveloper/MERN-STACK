@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .color {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <script>
+      let container = document.querySelector(".container");
+      //   console.log(container);
+      let newEle = document.createElement("h2");
+      newEle.innerText = "Hello Buchi";
+      container.appendChild(newEle);
+      newEle.setAttribute("class", "color");
+      newEle.setAttribute("style", "font-size:100px");
+    </script>
+  </body>
+</html>

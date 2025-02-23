@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // *******************Promise.all()*******************
+      //   const prom1 = Promise.reject("task1 done");
+      //   const prom2 = new Promise((reslove) => {
+      //     setTimeout(() => {
+      //       reslove("task2 done");
+      //     }, 2000);
+      //   });
+      //   const prom3 = Promise.resolve("task3 done");
+      // it will wait until every promise is resolved if it rejected prints error else gives fullfilled(that means resolved)
+      // it will give like this
+      /* (3) ['task1 done', 'task2 done', 'task3 done']
+        0: "task1 done"
+        1: "task2 done"
+        2: "task3 done"
+        length: 3
+        [[Prototype]]: Array(0)*/
+      // if it is rejected
+      // it will throw thw error
+      //   Promise.all([prom1, prom2, prom3])
+      //     .then((data) => console.log(data))
+      //     .catch((err) => console.log(err));
+
+      //   const prom1 = Promise.reject("task1 done");
+      //   const prom2 = new Promise((reslove) => {
+      //     setTimeout(() => {
+      //       reslove("task2 done");
+      //     }, 2000);
+      //   });
+      //   const prom3 = Promise.resolve("task3 done");
+
+      // *******************Promise.allSettled()*******************
+      //   const prom1 = Promise.reject("task1 done");
+      //   const prom2 = new Promise((reslove) => {
+      //     setTimeout(() => {
+      //       reslove("task2 done");
+      //     }, 2000);
+      //   });
+      //   const prom3 = Promise.resolve("task3 done");
+      // it will wait until every promise is completed if it doesn't bother about the fullfilled or rejected it will
+      // return all the promises with its status like this
+      /* (3) [{…}, {…}, {…}]
+        0: {status: 'rejected', reason: 'task1 done'}
+        1: {status: 'fulfilled', value: 'task2 done'}
+        2: {status: 'fulfilled', value: 'task3 done'}
+        length: 3
+        [[Prototype]]: Array(0)*/
+      /*Waits for all promises to settle (either resolve or reject).
+          Returns an array of objects with { status: 'fulfilled' | 'rejected', value | reason }.
+          */
+      //   Promise.allSettled([prom1, prom2, prom3])
+      //     .then((data) => console.log(data))
+      //     .catch((err) => console.log(err));
+
+      // *******************Promise.race()*******************
+      // it will give the first most setteled promise weather it is reject or resolve
+
+      //   const prom1 = new Promise((reslove) => {
+      //     setTimeout(() => {
+      //       reslove("task1 done");
+      //     }, 2001);
+      //   });
+      //   const prom2 = new Promise((reslove) => {
+      //     setTimeout(() => {
+      //       reslove("task2 done");
+      //     }, 2000);
+      //   });
+      //   const prom3 = new Promise((reslove, reject) => {
+      //     setTimeout(() => {
+      //       reject(new Error());
+      //     }, 1999);
+      //   });
+
+      //   Promise.race([prom1, prom2, prom3])
+      //     .then((data) => console.log(data))
+      //     .catch((err) => console.log(err));
+
+      // output will be
+      //Error at index2.html:78:18
+
+      // *******************Promise.any()*******************
+      // it will give the first most resolved promise If all promises reject, it returns an AggregateError.
+
+      //   const p7 = new Promise((_, reject) =>
+      //     setTimeout(() => reject("Error 1"), 1000)
+      //   );
+      //   const p8 = new Promise((resolve) =>
+      //     setTimeout(() => resolve("Success 1"), 2000)
+      //   );
+      //   const p9 = new Promise((resolve) =>
+      //     setTimeout(() => resolve("Success 2"), 3000)
+      //   );
+
+      //   Promise.any([p7, p8, p9])
+      //     .then((result) => console.log(result))
+      //     .catch((error) => console.log(error.errors));
+
+      /* Output (after 2 sec):
+        "Success 1"
+        */
+      // what if evertthing is rejected
+      const p7 = new Promise((_, reject) =>
+        setTimeout(() => reject("Error 1"), 1000)
+      );
+      const p8 = new Promise((_, reject) =>
+        setTimeout(() => reject("Error 2"), 2000)
+      );
+      const p9 = new Promise((_, reject) =>
+        setTimeout(() => reject("Error 3"), 3000)
+      );
+
+      Promise.any([p7, p8, p9])
+        .then((result) => console.log(result))
+        .catch((error) => console.log(error.errors));
+    </script>
+  </body>
+</html>

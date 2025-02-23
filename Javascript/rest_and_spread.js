@@ -1,4 +1,4 @@
-// Rest operator : we can padd indifinite parameters to the function using this
+// Rest operator : we can pass indifinite parameters to the function using this
 
 function sum(...inp) {
   let sum = 0;

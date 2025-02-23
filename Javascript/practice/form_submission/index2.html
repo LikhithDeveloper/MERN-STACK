@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Hello1</p>
+    <p>Hello2</p>
+    <p>Hello3</p>
+    <p>Hello4</p>
+    <p>Hello5</p>
+    <p>Hello6</p>
+    <p>Hello7</p>
+    <p>Hello8</p>
+    <p>Hello9</p>
+    <p>Hello10</p>
+    <script>
+      let tags = document.querySelectorAll("p");
+      console.log(tags);
+      tags.forEach(function (ele) {
+        console.log(ele);
+        ele.addEventListener("click", (e) => {
+          console.log(e.target.textContent);
+        });
+      });
+    </script>
+  </body>
+</html>

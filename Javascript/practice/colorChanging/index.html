@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input type="color" name="" id="inp-color" />
+    <h3>color code</h3>
+    <script>
+      let colorInput = document.getElementById("inp-color");
+      // console.log(colorInput);
+      let body = document.getElementsByTagName("body")[0];
+      let heading = document.getElementsByTagName("h3")[0];
+      // console.log(body);
+      colorInput.addEventListener("input", (e) => {
+        console.log(e);
+        body.style.backgroundColor = e.target.value;
+        heading.textContent = e.target.value;
+      });
+    </script>
+  </body>
+</html>
