@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="add()">Insert data</button>
+    <p></p>
+    <p></p>
+    <p></p>
+    <button onclick="dltCity()">Click to delete city</button>
+    <button onclick="dltall()">Click to delete city</button>
+
+    <script>
+      function main() {
+        const out = window.localStorage;
+        console.log(out);
+
+        document.getElementsByTagName("p")[0].innerText =
+          localStorage.getItem("name");
+        document.getElementsByTagName("p")[1].innerText =
+          localStorage.getItem("age");
+        document.getElementsByTagName("p")[2].innerText =
+          localStorage.getItem("city");
+      }
+      main();
+      function dltCity() {
+        localStorage.removeItem("city");
+        main();
+      }
+      function add() {
+        localStorage.setItem("name", "Likhith");
+        localStorage.setItem("age", 20);
+        localStorage.setItem("city", "Sompeta");
+        main();
+      }
+      function dltall() {
+        localStorage.clear();
+        main();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li:hover {
+  color: rgb(179, 224, 30);
+}
+.main {
+  background-color: rgba(23, 72, 220, 0.115);
+}
