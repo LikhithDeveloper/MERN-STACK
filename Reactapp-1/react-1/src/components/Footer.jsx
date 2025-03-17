@@ -1,5 +1,4 @@
 import React from "react";
-
 const Footer = () => {
   return (
     <div
@@ -9,11 +8,12 @@ const Footer = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: "blue",
-        color: "white",
+        background: "white",
+        color: "black",
         position: "absolute",
         bottom: "0",
       }}
+      className="foot"
     >
       Copyrights@2025 All rights reserved
     </div>

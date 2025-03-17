@@ -9,3 +9,12 @@ li:hover {
 .main {
   background-color: rgba(23, 72, 220, 0.115);
 }
+
+nav {
+  background-color: rgba(255, 255, 255, 0.292);
+  backdrop-filter: blur(10px);
+}
+.foot {
+  background-color: #00a2ff5a;
+  backdrop-filter: blur(10px);
+}
